@@ -1,0 +1,273 @@
+PODS:
+  - Block-KVO (2.2.1)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
+  - Firebase/AdMob (5.15.0):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (~> 7.37)
+  - Firebase/Auth (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.2.0)
+  - Firebase/Core (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.4.0)
+  - Firebase/CoreOnly (5.15.0):
+    - FirebaseCore (= 5.1.10)
+  - Firebase/Database (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.4)
+  - Firebase/Messaging (5.15.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.2.2)
+  - Firebase/RemoteConfig (5.15.0):
+    - Firebase/Core
+    - FirebaseRemoteConfig (= 3.1.0)
+  - FirebaseABTesting (2.0.0):
+    - FirebaseCore (~> 5.0)
+    - Protobuf (~> 3.5)
+  - FirebaseAnalytics (5.4.0):
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.3)
+    - GoogleAppMeasurement (= 5.4.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.1.0)
+  - FirebaseAuth (5.2.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.1)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (5.1.10):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.0.4):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.1)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (3.3.0):
+    - FirebaseCore (~> 5.1)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseMessaging (3.2.2):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
+  - FirebaseRemoteConfig (3.1.0):
+    - FirebaseABTesting (~> 2.0)
+    - FirebaseAnalytics (~> 5.3)
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.3)
+    - GoogleUtilities/Environment (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - Protobuf (~> 3.5)
+  - FlickrKit (1.0.9)
+  - GBDeviceInfo (6.0.0):
+    - GBDeviceInfo/Core (= 6.0.0)
+  - GBDeviceInfo/Core (6.0.0)
+  - Google-Mobile-Ads-SDK (7.37.0)
+  - GoogleAppMeasurement (5.4.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleToolboxForMac/Core (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+HTML (2.2.0)":
+    - GoogleToolboxForMac/Core (= 2.2.0)
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GoogleUtilities/AppDelegateSwizzler (5.3.6):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.6)
+  - GoogleUtilities/Logger (5.3.6):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.6):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.6):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.6)"
+  - GoogleUtilities/Reachability (5.3.6):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.6):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.2.1)
+  - HexColors (4.0.0)
+  - leveldb-library (1.20)
+  - LXReorderableCollectionViewFlowLayout (0.2.1)
+  - MMMarkdown (0.5.5)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - "NSData+Base64 (1.0.0)"
+  - OAuthCore (0.0.1):
+    - "NSData+Base64"
+  - OCMock (3.4.3)
+  - OHHTTPStubs (6.1.0):
+    - OHHTTPStubs/Default (= 6.1.0)
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
+  - OHHTTPStubs/Swift (6.1.0):
+    - OHHTTPStubs/Default
+  - Ono (1.2.2)
+  - Protobuf (3.6.1)
+  - PSPDFTextView (1.2.0)
+  - Punycode-Cocoa (1.3.1)
+  - Reachability (3.2)
+  - SGNavigationProgress (1.2)
+  - TKRSegueOptions (0.1.2)
+  - twitter-text (3.0.0)
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
+  - Underscore.m (0.3.0)
+
+DEPENDENCIES:
+  - Block-KVO
+  - Crashlytics
+  - Fabric
+  - Firebase/AdMob
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
+  - Firebase/Messaging
+  - Firebase/RemoteConfig
+  - FlickrKit (~> 1.0.7)
+  - GBDeviceInfo
+  - "GoogleToolboxForMac/NSDictionary+URLArguments"
+  - "GoogleToolboxForMac/NSString+HTML"
+  - HexColors (~> 4.0.0)
+  - LXReorderableCollectionViewFlowLayout
+  - MMMarkdown
+  - OAuthCore (~> 0.0.1)
+  - OCMock
+  - OHHTTPStubs (~> 6.1.0)
+  - OHHTTPStubs/Swift
+  - Ono (~> 1.2.0)
+  - PSPDFTextView
+  - Punycode-Cocoa (~> 1.3)
+  - Reachability
+  - SGNavigationProgress (~> 1.2)
+  - TKRSegueOptions
+  - twitter-text (~> 3.0.0)
+  - TwitterKit
+  - Underscore.m (~> 0.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Block-KVO
+    - Crashlytics
+    - Fabric
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebaseRemoteConfig
+    - FlickrKit
+    - GBDeviceInfo
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - HexColors
+    - leveldb-library
+    - LXReorderableCollectionViewFlowLayout
+    - MMMarkdown
+    - nanopb
+    - "NSData+Base64"
+    - OAuthCore
+    - OCMock
+    - OHHTTPStubs
+    - Ono
+    - Protobuf
+    - PSPDFTextView
+    - Punycode-Cocoa
+    - Reachability
+    - SGNavigationProgress
+    - TKRSegueOptions
+    - twitter-text
+    - TwitterCore
+    - TwitterKit
+    - Underscore.m
+
+SPEC CHECKSUMS:
+  Block-KVO: 64b63a4bde798ab43caa221db916192cee731886
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
+  FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
+  FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
+  FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
+  FirebaseAuth: 02e969ff430e156d99d4cb842d77b806b71ad7bb
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: 35747502d9e8c6ee217385ad04446c7c2aaf9c5c
+  FirebaseDatabase: 0621689f77528d62b47e1c06ca737c4c19275d1a
+  FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
+  FirebaseMessaging: b412996f6a09337d232bb3a6676ce4d1f353d024
+  FirebaseRemoteConfig: 7e11c65f0769c09bff6947997c209515058c5318
+  FlickrKit: 79ffaf64a12293ba2b1aa8a2e53a4958cb113256
+  GBDeviceInfo: b7576f403b3050c1d3f4b490ab1d7dbb951bb1d9
+  Google-Mobile-Ads-SDK: d028682d7450749a1955679da050eaf70d997b3e
+  GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  HexColors: 5f95843ef89aff6a72e1fd3a8ebabf205cc43379
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  LXReorderableCollectionViewFlowLayout: acd6fe9fd0800efc656266a345130a2f634abf85
+  MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  "NSData+Base64": 4e84902c4db907a15673474677e57763ef3903e4
+  OAuthCore: 43dce261db846a1fe20234d95654257e00e78581
+  OCMock: 43565190abc78977ad44a61c0d20d7f0784d35ab
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  PSPDFTextView: 805ff07dca594c05ab1f762309b998daedca79a3
+  Punycode-Cocoa: d9a974cc7384bd6d31b8d9df867a9b7b213d8880
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SGNavigationProgress: f04e3bd0058c53e1172ee020b5239f22aa9e4a0f
+  TKRSegueOptions: 13d59c72d873858409ae419c0c95ac7a234ca1c3
+  twitter-text: 0632ef6e3405960aac3f9514d9d1a2ff0805c5aa
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
+  Underscore.m: dc9ca06fe2c9a79d01ce20c3d2c1e8f91f2d92dc
+
+PODFILE CHECKSUM: 8d11a5c374c4b465cbc3f64cbdb2f590c44b30a1
+
+COCOAPODS: 1.5.3

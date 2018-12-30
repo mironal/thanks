@@ -1,0 +1,18 @@
+github "AgileBits/onepassword-extension" "add-framework-support"
+github "realm/realm-cocoa" ~> 3.11.0
+github "DaveWoodCom/XCGLogger" ~> 6.1.0
+github "corin8823/Popover" ~> 1.2.2
+github "iosdevzone/IDZSwiftCommonCrypto" ~> 0.10.0
+github "pinterest/PINCache" ~> 2.3
+github "jdg/MBProgressHUD" ~> 1.1.0
+github "kevin0571/STPopup" ~> 1.8.3
+github "victor-pavlychko/SwiftyAppearance" ~> 1.1.0
+github "delba/TextAttributes"
+github "mironal/NowPlayingFormatter" ~> 1.1.0
+github "HeshamMegid/HMSegmentedControl" ~> 1.5.4
+github "BoltsFramework/Bolts-ObjC" ~> 1.9.0
+github "dzenbot/DZNEmptyDataSet" ~> 1.8.1
+github "rs/SDWebImage" ~> 4.3.3
+github "kishikawakatsumi/KeychainAccess" ~> 3.1.2
+github "mattdonnelly/Swifter"
+
