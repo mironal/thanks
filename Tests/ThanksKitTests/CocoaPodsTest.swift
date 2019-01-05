@@ -10,20 +10,34 @@ import XCTest
 @testable import ThanksKit
 
 class CocoaPodsTest: XCTestCase {
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testCocoaPodsLicenses() throws {
+        let ls: [License] = cocoaPodsLicenses(from: """
+        hogehoge
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        ## One
 
-    func testExample() throws {
-        let path = Bundle(for: type(of: self)).path(forResource: "Pods-TestProject-acknowledgements", ofType: "markdown")
+        hugahuga
+        hogehoge
 
-        let markdown = try String(contentsOfFile: path!)
+        ## Two
 
-        let ls = try cocoaPodsLicenses(from: markdown)
-        XCTAssertTrue(ls.count > 0)
+        ああああ
+
+        \(cocoapodAckFileFooterMark)
+        """, in: "test file")
+
+        XCTAssertEqual(ls, [
+            License(projectName: "One", body: """
+
+            hugahuga
+            hogehoge
+
+            """, provider: .cocoaPods(filename: "test file")),
+            License(projectName: "Two", body: """
+
+            ああああ
+
+            """, provider: .cocoaPods(filename: "test file")),
+        ])
     }
 }

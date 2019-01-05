@@ -12,6 +12,8 @@ struct CliOption {
     var summary: Bool = false
     var excludePodTargets: [String] = []
     var excludeLibraries: [String] = []
+
+    var verbose: Bool = false
 }
 
 private func bind(_ binder: ArgumentBinder<CliOption>, parser: ArgumentParser) {
@@ -32,6 +34,9 @@ private func bind(_ binder: ArgumentBinder<CliOption>, parser: ArgumentParser) {
     binder.bind(option: parser.add(option: "--summary", kind: Bool.self,
                                    usage: "show only library summary"),
                 to: { $0.summary = $1 })
+
+    binder.bind(option: parser.add(option: "-verbose", shortName: "-v", kind: Bool.self, usage: "verbose output"),
+                to: { $0.verbose = $1 })
 }
 
 extension CliOption {

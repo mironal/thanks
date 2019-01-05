@@ -8,7 +8,11 @@
 @testable import ThanksKit
 import XCTest
 
-class UtilsTest: XCTestCase {
+class CarthageTest: XCTestCase {
+    override func setUp() {
+        XCTAssertTrue(FileManager.default.currentDirectoryPath.hasSuffix("TestProject"), "Please set path to TestProject to custom working directory")
+    }
+
     func testProjectName() {
         let invalid = projectName(from: "invalid")
         XCTAssertNil(invalid)
@@ -18,7 +22,9 @@ class UtilsTest: XCTestCase {
 
         let name1 = projectName(from: "github 'AgileBits/onepassword-extension' 'add-framework-support'")
         XCTAssertEqual(name1, "onepassword-extension")
+    }
 
+    func testSplitCarthageDependencies() {
         let cartfile = """
         github "AgileBits/onepassword-extension" "add-framework-support"
         github "realm/realm-cocoa" ~> 3.11.0
@@ -39,9 +45,9 @@ class UtilsTest: XCTestCase {
         github "mattdonnelly/Swifter"
         """
 
-        let paths = cartfile.components(separatedBy: .newlines).compactMap(projectName(from:))
+        let deps = splitCarthageDependencies(cartfile: cartfile)
 
-        XCTAssertEqual(paths, [
+        XCTAssertEqual(deps, [
             "onepassword-extension",
             "realm-cocoa",
             "XCGLogger",
@@ -81,9 +87,9 @@ class UtilsTest: XCTestCase {
             "Carthage/Checkouts/SDWebImage",
             "Carthage/Checkouts/KeychainAccess",
             "Carthage/Checkouts/Swifter",
-        ]
+        ].map { (FileManager.default.currentDirectoryPath as NSString).appendingPathComponent($0) }
 
-        let licenseFilepaths = paths.compactMap(findLicenseFileIn)
+        let licenseFilepaths = paths.compactMap(findLicenseFileIn(carthageCheckout:))
 
         XCTAssertEqual(paths.count, licenseFilepaths.count)
         licenseFilepaths.forEach { path in
@@ -91,7 +97,7 @@ class UtilsTest: XCTestCase {
         }
     }
 
-    func testCarthageLicenses() throws {
+    func testResolveCarthageLicenses() throws {
         let cartfile = """
         github "AgileBits/onepassword-extension" "add-framework-support"
         github "realm/realm-cocoa" ~> 3.11.0
@@ -112,7 +118,14 @@ class UtilsTest: XCTestCase {
         github "mattdonnelly/Swifter"
         """
 
-        let licenses = try carthageLicenses(from: cartfile)
-        XCTAssertEqual(cartfile.components(separatedBy: .newlines).count, licenses.count)
+        let deps = splitCarthageDependencies(cartfile: cartfile)
+        let licenses = try deps.map { try resolveCarthageLicense(from: $0, in: FileManager.default.currentDirectoryPath) }
+        XCTAssertEqual(cartfile.components(separatedBy: .newlines).count, licenses.count, "Resolve all license file")
+
+        XCTAssertThrowsError(
+            try resolveCarthageLicense(from: "hoge", in: FileManager.default.currentDirectoryPath)
+        ) { error in
+            XCTAssertTrue(String(describing: error).hasPrefix("License file not found "))
+        }
     }
 }

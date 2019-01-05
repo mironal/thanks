@@ -13,8 +13,16 @@ public enum LicenseProvider {
     case other
 }
 
+extension LicenseProvider: Equatable {}
+
 public struct License {
     public let projectName: String
     public let body: String
     public let provider: LicenseProvider
+}
+
+extension License: Equatable {
+    public static func == (lhs: License, rhs: License) -> Bool {
+        return lhs.projectName == rhs.projectName && lhs.provider == rhs.provider && lhs.body == rhs.body
+    }
 }

@@ -10,6 +10,14 @@ import Foundation
 import Rainbow
 
 class _Console {
+    var varbose: Bool = false
+
+    func debug(_ msg: Any) {
+        if varbose {
+            fputs("\(String(describing: msg))\n".blue, stdout)
+        }
+    }
+
     func info(_ msg: Any) {
         fputs("\(String(describing: msg))\n", stdout)
     }
