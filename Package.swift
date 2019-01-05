@@ -7,7 +7,7 @@ let package = Package(
     name: "Thanks",
     products: [
         .library(name: "ThanksKit", targets: ["ThanksKit"]),
-        .executable(name: "Thanks", targets: ["Thanks"]),
+        .executable(name: "thanks", targets: ["Thanks"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
