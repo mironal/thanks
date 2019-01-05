@@ -55,7 +55,7 @@ func collect(opt: CliOption) throws -> [License] {
         Console.warn("Cartfile not found in \(opt.rootDir).")
     }
 
-    let carthage = try cartfilePath.map { try String(contentsOfFile: $0) }
+    let carthage = opt.excludeCarthage ? [] : try cartfilePath.map { try String(contentsOfFile: $0) }
         .flatMap({ cartfile in
             splitCarthageDependencies(cartfile: cartfile)
         })?
@@ -64,18 +64,18 @@ func collect(opt: CliOption) throws -> [License] {
             try resolveCarthageLicense(from: $0, in: opt.rootDir)
         } ?? []
 
-    if cartfilePath != nil, carthage.count == 0 {
+    if cartfilePath != nil, !opt.excludeCarthage, carthage.count == 0 {
         Console.warn("There are no carthage dependencies.")
     }
 
-    let cocoapodAckFilepaths = find(opt.rootDir, regex: "Pods-.+-acknowledgements.markdown$")
+    let cocoapodAckFilepaths = opt.excludeCocoaPod ? [] : find(opt.rootDir, regex: "Pods-.+-acknowledgements.markdown$")
         .filter(podTargetFilter)
 
     let cocoapods: [License] = try cocoapodAckFilepaths.flatMap {
         cocoaPodsLicenses(from: try String(contentsOfFile: $0), in: $0)
     }.filter(libraryFilter).uniq(keyPath: \.projectName)
 
-    if cocoapods.count == 0 {
+    if !opt.excludeCocoaPod, cocoapods.count == 0 {
         Console.warn("There are no cocoapods dependencies.")
     }
 

@@ -12,7 +12,8 @@ struct CliOption {
     var summary: Bool = false
     var excludePodTargets: [String] = []
     var excludeLibraries: [String] = []
-
+    var excludeCocoaPod: Bool = false
+    var excludeCarthage: Bool = false
     var verbose: Bool = false
 }
 
@@ -31,11 +32,17 @@ private func bind(_ binder: ArgumentBinder<CliOption>, parser: ArgumentParser) {
                                    usage: "List of Cocoapod target to ignore"),
                 to: { $0.excludePodTargets = $1 })
 
+    binder.bind(option: parser.add(option: "--excludeCocoaPod", kind: Bool.self, usage: "Exclude all cocoapod dependencies"),
+                to: { $0.excludeCocoaPod = $1 })
+
+    binder.bind(option: parser.add(option: "--excludeCarthage", kind: Bool.self, usage: "Exclude all carthage dependencies"),
+                to: { $0.excludeCarthage = $1 })
+
     binder.bind(option: parser.add(option: "--summary", kind: Bool.self,
                                    usage: "show only library summary"),
                 to: { $0.summary = $1 })
 
-    binder.bind(option: parser.add(option: "-verbose", shortName: "-v", kind: Bool.self, usage: "verbose output"),
+    binder.bind(option: parser.add(option: "--verbose", shortName: "-v", kind: Bool.self, usage: "verbose output"),
                 to: { $0.verbose = $1 })
 }
 
