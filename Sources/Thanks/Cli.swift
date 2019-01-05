@@ -42,7 +42,7 @@ private func bind(_ binder: ArgumentBinder<CliOption>, parser: ArgumentParser) {
 extension CliOption {
     public init(arguments: [String]) throws {
         let binder = ArgumentBinder<CliOption>()
-        let parser = ArgumentParser(usage: "thanks [options] <path>",
+        let parser = ArgumentParser(usage: "thanks [options] <path/to/xcode/project/dir>",
                                     overview: "Collect library license files in carthage or cocoapod")
 
         bind(binder, parser: parser)

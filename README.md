@@ -3,6 +3,22 @@
 ## Usage
 
 ```sh
+❯ swift run thanks -h
+```
 
-thanks --excludePodTargets Test, Hoge, --exclude Firebase --format plist .
+```
+OVERVIEW: Collect library license files in carthage or cocoapod
+
+USAGE: thanks thanks [options] <path/to/xcode/project/dir>
+
+OPTIONS:
+  --exclude, -x             List of libraries to ignore
+  --excludePodTarget, -xp   List of Cocoapod target to ignore
+  --summary                 show only library summary
+  -verbose, -v              verbose output
+  --help                    Display available options
+
+POSITIONAL ARGUMENTS:
+  path                      The project root directory
+  
 ```
